@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./ngv-page.ts"></script>
+    <script type="module" src="./index.ts"></script>
+    <style>
+      html {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+
+      [slot="banner"] {
+        height: 40px;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+      }
+      [slot="header"] {
+        height: 80px;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+      }
+      [slot="menu"] {
+        width: 200px;
+        border-right: 1px solid #ccc;
+      }
+      [slot="aside"] {
+        width: 120px;
+        border-left: 1px solid #ccc;
+      }
+      [slot="menu"], [slot="aside"] {
+        height: 100%;
+      }
+      [slot="main-header"], [slot="main-footer"] {
+        background-color: #ccc;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <ngv-page>
+      <div slot="banner">banner <button id="close-banner" type="button">close</button></div>
+      <div slot="header">header</div>
+      <div slot="menu">menu</div>
+      <div slot="main-header">main-header</div>
+      <div slot="main-content" id="map"></div>
+      <div slot="main-footer">main-footer</div>
+      <div slot="aside">aside</div>
+      <!-- <div slot="footer">footer</div> -->
+    </ngv-page>
+  </body>
+</html>
