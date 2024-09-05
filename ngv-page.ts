@@ -147,3 +147,9 @@ export class NgvPage extends LitElement {
     // FIXME: unobserve
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'ngv-page': NgvPage;
+  }
+}

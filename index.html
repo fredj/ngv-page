@@ -25,14 +25,18 @@
       }
 
       [slot="banner"] {
-        height: 40px;
         background-color: #fff;
         border-bottom: 1px solid #ccc;
       }
       [slot="header"] {
-        height: 80px;
+        height: 40px;
         background-color: #fff;
         border-bottom: 1px solid #ccc;
+      }
+      @media (min-width: 600px) {
+        [slot="header"] {
+          height: 80px;
+        }
       }
       [slot="menu"] {
         width: 200px;
@@ -54,7 +58,13 @@
 
   <body>
     <ngv-page>
-      <div slot="banner">banner <button id="close-banner" type="button">close</button></div>
+      <div slot="banner">
+        <sl-alert variant="warning" open closable>
+          <sl-icon slot="icon" name="exclamation-triangle"></sl-icon>
+          <strong>This is the banner</strong><br />
+          You can close me.
+        </sl-alert>
+      </div>
       <div slot="header">header</div>
       <div slot="menu">menu</div>
       <div slot="main-header">main-header</div>

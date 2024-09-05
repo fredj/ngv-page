@@ -5,6 +5,7 @@
     "start": "parcel index.html"
   },
   "devDependencies": {
+    "@shoelace-style/shoelace": "2.16.0",
     "ol": "10.1.0",
     "parcel": "2.12.0"
   },
